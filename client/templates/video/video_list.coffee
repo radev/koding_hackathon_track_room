@@ -16,7 +16,7 @@ Template.videoList.rendered = ->
     $("#linktoroom").attr "href", location.href
     $("body").addClass "active"
 
-  room = location.href.split('rooms/')[1]
+  room = @.data._id
   webrtc = new SimpleWebRTC(
     localVideoEl: "localVideo"
     remoteVideosEl: ""
@@ -60,4 +60,3 @@ Template.videoList.rendered = ->
     return
 
   setRoom room
-  
