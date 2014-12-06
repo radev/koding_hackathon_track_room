@@ -5,9 +5,10 @@ Meteor.methods messageInsert: (messageAttributes) ->
     name: String
     text: String
     room: String
+    lang: String
 
   message = _.extend(messageAttributes,
     submitted: new Date()
   )
-  Messages.insert(message)
+  Meteor.call('saveMessage', message);
   return
