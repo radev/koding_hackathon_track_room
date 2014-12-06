@@ -1,8 +1,13 @@
 Template.messagesList.helpers messages: ->
   Messages.find()
 
+subscription = null
+
 Template.messagesList.rendered = ->
-  room =
-  Meteor.subscribe("roomMessages", this.data.room._id, $('select[name="language"]').val() )
+  room = @.data._id
+  room = @.data.room._id unless room
+  subscription = Meteor.subscribe("roomMessages", room, $('select[name="language"]').val())
   $('select[name="language"]').change ->
-    Meteor.subscribe("roomMessages", @params._id, $('select[name="language"]').val() )
+    $('#chat').empty()
+    subscription && subscription.stop();
+    subscription = Meteor.subscribe("roomMessages", room, $('select[name="language"]').val())
