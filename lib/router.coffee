@@ -6,4 +6,17 @@ Router.map ->
   @route "roomNew",
     path: "/"
 
+  @route "roomView",
+    path: "/rooms/:_id"
+    waitOn: ->
+      [
+        Meteor.subscribe("singleRoom", @params._id)
+        Meteor.subscribe("roomMessages", @params._id)
+      ]
+    data: ->
+      Rooms.findOne @params._id
+
 Router.onBeforeAction "loading"
+
+# Router.onAfterAction ->
+#   debugger
