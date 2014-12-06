@@ -13,8 +13,8 @@ Router.map ->
         Meteor.subscribe("singleRoom", @params._id)
         Meteor.subscribe("roomMessages", @params._id)
       ]
-    data: ->
-      Rooms.findOne @params._id
+     data: ->
+      room: Rooms.findOne _id: @params._id
 
 Router.onBeforeAction "loading"
 
