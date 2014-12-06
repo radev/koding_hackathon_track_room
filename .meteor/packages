@@ -6,3 +6,8 @@
 meteor-platform
 autopublish
 insecure
+coffeescript
+mizzao:bootstrap-3
+iron:router
+audit-argument-checks
+
