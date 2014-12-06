@@ -16,6 +16,7 @@ Meteor.publish "roomMessages", (roomId, lang) ->
   ,
     $set:
       languages: languages
+
   Messages.find room: roomId, lang: lang
 
 Meteor.publish "singleRoom", (roomId) ->
