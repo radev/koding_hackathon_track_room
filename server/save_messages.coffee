@@ -1,5 +1,4 @@
 Meteor.methods saveMessage: (messageAttributes) ->
-
   check messageAttributes,
     name: String
     text: String

@@ -14,3 +14,6 @@ peerlibrary:xml2js
 http
 matteodem:server-session
 chuangbo:cookie
+email
+cmather:handlebars-server
+
