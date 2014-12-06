@@ -5,10 +5,20 @@
   {{> messagesList}}
   <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-2">
           <div class="form-group">
             <label>Name:</label>
             <input type="text" name="name" class="form-control" id="name" placeholder="Please enter your nane">
+          </div>
+      </div>
+      <div class="col-md-2">
+          <div class="form-group">
+              <label>Language:</label>
+              <select name="language" class="form-control">
+                  <option value="en">English</option>
+                  <option value="es">Spanish</option>
+                  <option value="ru">Russian</option>
+              </select>
           </div>
       </div>
       <form>
