@@ -62,7 +62,8 @@ Template.videoList.rendered = ->
   recognizing = false
   if window.webkitSpeechRecognition
     start_speech = ->
-      recognition.lang = "ru-RU" # 'en-US' works too, as do many others
+      # recognition.lang = "ru-RU" # 'en-US' works too, as do many others
+      recognition.lang = $('select[name="language"]').val() # 'en-US' works too, as do many others
       recognition.start()
       return
     recognition = new webkitSpeechRecognition()
@@ -81,10 +82,9 @@ Template.videoList.rendered = ->
       while i < event.results.length
         if event.results[i].isFinal
           final_transcript += event.results[i][0].transcript
-          console.log "Final: " + final_transcript
+          Meteor.call 'messageInsert', { name: $('input[name="name"]').val(), text: final_transcript, room: room, lang: @.lang }
         else
           interim_transcript += event.results[i][0].transcript
-          console.log "Interim: " + interim_transcript
         ++i
       return
 

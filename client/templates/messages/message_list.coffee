@@ -1,5 +1,5 @@
 Template.messagesList.helpers messages: ->
-  Messages.find()
+  Messages.find({}, {sort: {submitted: -1} })
 
 subscription = null
 
