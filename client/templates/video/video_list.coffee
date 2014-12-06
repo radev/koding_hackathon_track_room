@@ -1,5 +1,4 @@
 
-
 Template.videoList.rendered = ->
 
   showVolume = (el, volume) ->
@@ -16,7 +15,8 @@ Template.videoList.rendered = ->
     $("#linktoroom").attr "href", location.href
     $("body").addClass "active"
 
-  room = @.data._id
+  room = @.data.room._id
+  room = @.data._id unless room
   webrtc = new SimpleWebRTC(
     localVideoEl: "localVideo"
     remoteVideosEl: ""
