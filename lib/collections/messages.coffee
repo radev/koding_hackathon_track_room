@@ -11,6 +11,4 @@ Meteor.methods messageInsert: (messageAttributes) ->
     submitted: new Date()
   )
   Meteor.call('saveMessage', message);
-  # Messages.insert(message)
-
   return
