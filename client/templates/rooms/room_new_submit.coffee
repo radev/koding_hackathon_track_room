@@ -9,5 +9,6 @@ Template.roomNew.events "click #addRoom": ->
 
     Router.go "roomView",
       _id: result._id
+      lang: 'en'
 
     return
