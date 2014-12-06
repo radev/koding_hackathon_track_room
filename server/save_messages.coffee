@@ -20,11 +20,15 @@ Meteor.methods saveMessage: (messageAttributes) ->
           text: text
       , (error, result) ->
         if result
-          xml2js.parseString result.content, (err, result) ->
-            if result
-              messageAttributes.text = result.string._
-              messageAttributes.lang = to
-              Messages.insert(messageAttributes)
+          if result.statusCode == 200
+            xml2js.parseString result.content, (err, result) ->
+              if result
+                messageAttributes.text = result.string._
+                messageAttributes.lang = to
+                Messages.insert(messageAttributes)
+          else
+            messageAttributes.text = 'Error in translation'
+            Messages.insert(messageAttributes)
         else
           console.log "BUG result get translate"
 
@@ -70,6 +74,4 @@ Meteor.methods saveMessage: (messageAttributes) ->
           expired = Math.round(new Date().getTime()/1000.0) + 550
           get_access_token()
       i++
-
-
   return message
