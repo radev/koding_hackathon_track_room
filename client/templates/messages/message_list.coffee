@@ -1,2 +1,2 @@
 Template.messagesList.helpers messages: ->
-  Messages.find()
+  Messages.find(lang: 'en')

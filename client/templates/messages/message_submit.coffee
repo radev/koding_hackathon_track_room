@@ -4,6 +4,7 @@ Template.roomView.events "submit form": (e) ->
     name: $('#name').val()
     text: $(e.target).find("[name=message]").val()
     room: Rooms.findOne()._id
+    lang: 'ru'
 
   unless $(e.target).find("[name=message]").val() == ""
     Meteor.call "messageInsert", message, (error, result) ->
