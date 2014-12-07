@@ -6,3 +6,6 @@ Template.roomView.created = ->
   window.room = room
   Session.setDefault "lang", default_lang
   return
+
+Template.roomView.rendered = ->
+  $('#saveFile').attr('href', '/rooms/' + window.room + '/' + Session.get('lang') + '/save')
