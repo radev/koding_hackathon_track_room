@@ -11,7 +11,7 @@ Template.videoList.rendered = ->
       el.style.height = "" + Math.floor((volume + 100) * 100 / 25 - 220) + "%"
 
   setRoom = (name) ->
-    $("#linktoroom").text " - " + location.href
+    $("#linktoroom").text location.href
     $("#linktoroom").attr "href", location.href
     $("body").addClass "active"
 
