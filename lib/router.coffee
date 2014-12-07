@@ -1,5 +1,5 @@
 Router.configure
-  layoutTemplate: "layout"
+  layoutTemplate: "landingLayout"
   loadingTemplate: "loading"
 
 Router.map ->
@@ -8,6 +8,7 @@ Router.map ->
 
   @route "roomView",
     path: "/rooms/:_id"
+    layoutTemplate: 'layout'
     waitOn: ->
       [
         Meteor.subscribe("singleRoom", @params._id)
