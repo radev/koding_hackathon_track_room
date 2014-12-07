@@ -13,6 +13,6 @@ Meteor.methods messageInsert: (messageAttributes) ->
   )
   message = Messages.insert(messageAttributes)
   Meteor.call "messageTranslate", messageAttributes, (error, result) ->
-    return alert(error.reason)  if error
+    return error.reason if error
   return message
 
