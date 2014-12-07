@@ -15,7 +15,7 @@ Template.videoList.rendered = ->
     $("#linktoroom").attr "href", location.href
     $("body").addClass "active"
 
-  room = @.data.room._id
+  room = @.data.room._idw
   room = @.data._id unless room
   webrtc = new SimpleWebRTC(
     localVideoEl: "localVideo"
@@ -28,7 +28,6 @@ Template.videoList.rendered = ->
   webrtc.on "readyToCall", ->
     webrtc.joinRoom room  if room
     return
-  window.webrtc = webrtc
   webrtc.on "channelMessage", (peer, label, data) ->
     showVolume document.getElementById("volume_" + peer.id), data.volume  if data.type is "volume"
     return
