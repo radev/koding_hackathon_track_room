@@ -1,12 +1,14 @@
-Meteor.methods saveMessage: (messageAttributes) ->
+Meteor.methods messageInsert: (messageAttributes) ->
 
   check messageAttributes,
     name: String
     text: String
     room: String
     lang: String
-    submitted: Date
 
+  messageAttributes = _.extend(messageAttributes,
+    submitted: new Date()
+  )
   message = Messages.insert(messageAttributes)
 
   get_translate = (access_token, from, to, text) ->
