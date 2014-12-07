@@ -7,7 +7,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>TRACK CHAT</title>
+    <title>TREK CHAT</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Latest compiled and minified CSS -->
@@ -32,18 +32,43 @@
 
   <body>
 
-    <section id="container" >
+  <section id="container" >
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
       <header class="header black-bg">
-        <div class="sidebar-toggle-box">
-            <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
-        </div>
-        <a href="#" class="logo"><b>TRACK CHAT</b></a>
-       
-      </header>
-
+              <div class="sidebar-toggle-box">
+                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+              </div>
+            <!--logo start-->
+            <a href="index.html" class="logo"><b>TREK CHAT</b></a>
+            <!--logo end-->
+            <div class="nav notify-row" id="top_menu">
+                <!--  notification start -->
+                <ul class="nav top-menu">
+                    <!-- settings start -->
+                    
+                </ul>
+                <!--  notification end -->
+            </div>
+            <div class="top-menu">
+            	<ul class="nav pull-right top-menu">
+                    <li><a class="logout" href="login.html">Logout</a></li>
+            	</ul>
+            </div>
+        </header>
+      <!--header end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
       <aside>
           <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
               <ul class="sidebar-menu text-center" id="nav-accordion">
+              
 
                   <li>
                     <i class="fa fa-microphone"></i>
@@ -53,86 +78,253 @@
                   </li>
 
               </ul>
+              <!-- sidebar menu end-->
           </div>
       </aside>
-
+      <!--sidebar end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
       <section id="main-content" class='container-fluid'>
           <section class="wrapper">
-
+          	<!-- <h3><i class="fa fa-angle-right"></i> Blank Page</h3> -->
+          	
             <div class="row ">
           		<div class="col-lg-12 nopadding-columns">
                 <div id='remoteVideos'>
-                  USERS ONLINE
-                </div>
-            </div>
-
-            <div class="row">
-                <div id='chatContainer' class="container">
-                  <div class="col-lg-12 my">
-                    <div id="chatMessage">
-                      <div class="chat-mess-container ">
-                        <div class='label label-warning' title="06.12.14 00:00">Name:</div>
-                        <div class="textMessage">Last mess
-                        Last mess Last mess Last mess Last mess Last mess Last mess Last mess Last mess Last mess Last mess 
-                        Last mess Last mess Last mess Last mess Last mess 
-                          </div>
-                      </div>
-                      <div class="chat-pointer chat-pointer-right" ></div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12 remote">
-                    <div id="chatMessage">
-                      <div class="chat-mess-container ">
-                        <div class='label label-warning' title="06.12.14 00:00">Name:</div>
-                        <div class="textMessage">Last mess
-                        Last mess Last mess Last mess Last mess Last mess Last mess Last mess Last mess Last mess Last mess 
-                        Last mess Last mess Last mess Last mess Last mess 
-                          </div>
-                      </div>
-                      <div class="chat-pointer chat-pointer-right" ></div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12 my">
-                    <div id="chatMessage">
-                      <div class="chat-mess-container ">
-                        <div class='label label-warning' title="06.12.14 00:00">Name:</div>
-                        <div class="textMessage">Last mess
-                        Last mess Last mess Last mess Last mess Last mess Last mess Last mess Last mess Last mess Last mess 
-                        Last mess Last mess Last mess Last mess Last mess 
-                          </div>
-                      </div>
-                      <div class="chat-pointer chat-pointer-left" ></div>
-                    </div>
-                  </div>
+                USERS ONLINE
+                  <div>
                   
+                  </div>
+          		  <!-- <p>Users</p> -->
                 </div>
-                
+              <!-- <hr> -->
+
+                <div id='chatContainer' class="container">
+
+                  <div id="chatMessage" class="col-md-6" style="">
+                    <div class="chat-mess-container">
+                      <div class='label label-primary'>Name</div>
+                      <p>Last mess
+                      Last mess Last mess Last mess Last mess Last mess Last mess Last mess Last mess Last mess Last mess 
+                      Last mess Last mess Last mess Last mess Last mess 
+                        </p>
+                    </div>
+                  <div class="chat-pointer chat-pointer-right" ></div>
+                </div>
+
+
+                  <div id="chatMessage" class="col-md-6" style="">
+                    <div class="chat-mess-container">
+                      <div class='label label-primary'>Name</div>
+                      <p>Second Second Second Second Second Second Second Second Second Second 
+                      Second Second Second Second Second Second Second Second Second SecondSecond Second Second Second Second Second Second Second Second Seco
+                        </p>
+                    </div>
+                  <div class="chat-pointer chat-pointer-left" ></div>
+                </div>
+
+                  <div id="chatMessage" class="col-md-6" style="">
+                    <div class="chat-mess-container">
+                      <div class='label label-primary'>Name</div>
+                      <p>three three threethree three three three three three 
+                      three three three three three three three three 
+                      three three three three three three three 
+                      three three three 
+                        </p>
+                    </div>
+                  <div class="chat-pointer chat-pointer-left" ></div>
+                </div>
+
+                  <div id="chatMessage" class="col-md-6" style="">
+                    <div class="chat-mess-container">
+                      <div class='label label-primary'>Name</div>
+                      <p>fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth fourth 
+                        </p>
+                    </div>
+                  <div class="chat-pointer chat-pointer-left" ></div>
+                </div>
+
+                  <div id="chatMessage" class="col-md-6" style="">
+                    <div class="chat-mess-container">
+                      <div class='label label-primary'>Name</div>
+                      <p>Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth 
+                        </p>
+                    </div>
+                  <div class="chat-pointer chat-pointer-left" ></div>
+                </div>
+
+
+                  <div id="chatMessage" class="col-md-6" style="">
+                    <div class="chat-mess-container">
+                      <div class='label label-primary'>Name</div>
+                      <p>Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth 
+                        </p>
+                    </div>
+                  <div class="chat-pointer chat-pointer-left" ></div>
+                </div>
+
+
+                  <div id="chatMessage" class="col-md-6" style="">
+                    <div class="chat-mess-container">
+                      <div class='label label-primary'>Name</div>
+                      <p>Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth 
+                        </p>
+                    </div>
+                  <div class="chat-pointer chat-pointer-left" ></div>
+                </div>
+
+
+                  <div id="chatMessage" class="col-md-6" style="">
+                    <div class="chat-mess-container">
+                      <div class='label label-primary'>Name</div>
+                      <p>Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth 
+                        </p>
+                    </div>
+                  <div class="chat-pointer chat-pointer-left" ></div>
+                </div>
+
+                  <div id="chatMessage" class="col-md-6" style="">
+                    <div class="chat-mess-container">
+                      <div class='label label-primary'>Name</div>
+                      <p>Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth 
+                        </p>
+                    </div>
+                  <div class="chat-pointer chat-pointer-left" ></div>
+                </div>
+
+
+                  <div id="chatMessage" class="col-md-6" style="">
+                    <div class="chat-mess-container">
+                      <div class='label label-primary'>Name</div>
+                      <p>Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth 
+                        </p>
+                    </div>
+                  <div class="chat-pointer chat-pointer-left" ></div>
+                </div>
+
+                  <div id="chatMessage" class="col-md-6" style="">
+                    <div class="chat-mess-container">
+                      <div class='label label-primary'>Name</div>
+                      <p>Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth 
+                        </p>
+                    </div>
+                  <div class="chat-pointer chat-pointer-left" ></div>
+                </div>
+
+
+                  <div id="chatMessage" class="col-md-6" style="">
+                    <div class="chat-mess-container">
+                      <div class='label label-primary'>Name</div>
+                      <p>Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth 
+                        </p>
+                    </div>
+                  <div class="chat-pointer chat-pointer-left" ></div>
+                </div>
+
+
+                  <div id="chatMessage" class="col-md-6" style="">
+                    <div class="chat-mess-container">
+                      <div class='label label-primary'>Name</div>
+                      <p>Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth 
+                        </p>
+                    </div>
+                  <div class="chat-pointer chat-pointer-left" ></div>
+                </div>
+
+
+                  <div id="chatMessage" class="col-md-6" style="">
+                    <div class="chat-mess-container">
+                      <div class='label label-primary'>Name</div>
+                      <p>Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth 
+                        </p>
+                    </div>
+                  <div class="chat-pointer chat-pointer-left" ></div>
+                </div>
+                  <div id="chatMessage" class="col-md-6" style="">
+                    <div class="chat-mess-container">
+                      <div class='label label-primary'>Name</div>
+                      <p>Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth 
+                        </p>
+                    </div>
+                  <div class="chat-pointer chat-pointer-left" ></div>
+                </div>
+
+
+                  <div id="chatMessage" class="col-md-6" style="">
+                    <div class="chat-mess-container">
+                      <div class='label label-primary'>Name</div>
+                      <p>Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth 
+                        </p>
+                    </div>
+                  <div class="chat-pointer chat-pointer-left" ></div>
+                </div>
+                  <div id="chatMessage" class="col-md-6" style="">
+                    <div class="chat-mess-container">
+                      <div class='label label-primary'>Name</div>
+                      <p>Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth 
+                        </p>
+                    </div>
+                  <div class="chat-pointer chat-pointer-left" ></div>
+                </div>
+
+
+                  <div id="chatMessage" class="col-md-6" style="">
+                    <div class="chat-mess-container">
+                      <div class='label label-primary'>Name</div>
+                      <p>Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth Fifth 
+                        </p>
+                    </div>
+                  <div class="chat-pointer chat-pointer-left" ></div>
+                </div>
 
           		</div>
           	</div>
 
-          </section>
-      <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-        <div class="row">
-          <form>
-            <div class="col-lg-11 col-md-10 col-xs-7">
-              <input type="text" class="form-control" name="message" id="message">
-            </div>
-            <div class="col-lg-1 col-md-2 col-xs-5">
-              <button type="submit" class="btn btn-info top-button">Submit</button>
-            </div>
-          </form>
-        </div>
-      </nav>
-    </section>
+
+			
+          </section><!--/wrapper -->
+          <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+                <div class="row">
+                  <div class="col-md-4">
+                      
+                  </div>
+                  <form>
+                    <div class="col-md-6">
+                      <label class="form-label">Write message:</label>
+                      <input type="text" class="form-control" name="message" id="message">
+                    </div>
+                    <div class="col-md-2">
+                      <button type="submit" class="btn btn-info top-button">Submit</button>
+                    </div>
+                  </form>
+                </div>
+              </nav>
+      </section><!-- /MAIN CONTENT -->
+
+      <!--main content end-->
+      <!--footer start-->
+
+      <!--footer end-->
   </section>
-  <script src="assets/js/jquery.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
-  <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
-  <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-  <script src="assets/js/jquery.scrollTo.min.js"></script>
-  <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-  <script src="assets/js/common-scripts.js"></script>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="assets/js/jquery.scrollTo.min.js"></script>
+    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+
+
+    <!--common script for all pages-->
+    <script src="assets/js/common-scripts.js"></script>
+
+    <!--script for this page-->
+
+
   </body>
 </html>

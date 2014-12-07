@@ -11,10 +11,8 @@ audit-argument-checks
 sacha:spin
 peerlibrary:xml2js
 http
-matteodem:server-session
-chuangbo:cookie
 email
 cmather:handlebars-server
 mizzao:bootstrap-3
 fortawesome:fontawesome
-
+u2622:persistent-session
