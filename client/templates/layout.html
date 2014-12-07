@@ -1,8 +1,31 @@
 <template name="layout">
-  <div class="container">
-    <header>
-      <h1>TrackRoom<a href="#" id="linktoroom"></a></h1>
+  <section id="container">
+    <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+            <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+        </div>
+        <a href="#" class="logo"><b>TRACK CHAT</b></a>
+        <a href="#" id="linktoroom"></a>
     </header>
+  </section>
+
+  <aside>
+      <div id="sidebar"  class="nav-collapse ">
+          <ul class="sidebar-menu text-center" id="nav-accordion">
+
+              <li>
+                <i class="fa fa-microphone"></i>
+              </li>
+              <li>
+                <i class="fa fa-video-camera"></i>
+              </li>
+
+          </ul>
+      </div>
+  </aside>
+
+  <section id="main-content" class='container-fluid'>
     {{> yield}}
-  </div>
+  </section>
+
 </template>

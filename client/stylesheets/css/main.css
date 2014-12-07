@@ -1,0 +1,111 @@
+.sidebar-toggle-box{
+    margin-right: 13px;
+}
+#remoteVideos {
+    padding: 10px;
+    background-color: #aaa;
+    height:200px;
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+}
+.nopadding-columns {
+    padding: 0 !important;
+}
+
+
+#chatMessage {
+    opacity: 1;
+    margin-bottom: 5px;
+}
+
+.my .chat-pointer:after {
+    background: none repeat scroll 0 0 #EBFFF1;
+}
+.my .chat-mess-container{
+    background: #EBFFF1;
+}
+.textMessage{
+    margin-top: 3px;
+}
+.chat-mess-container {
+    border: 2px solid #424a5d;
+    border-radius: 5px;
+    background: none repeat scroll 0 0 #fff;
+    padding: 5px;
+}
+
+.my .chat-pointer:after {
+    box-shadow: 1px -1px 4px rgba(0, 0, 0, 0.2);
+    right: 9px;
+    top: 5px;
+}
+.chat-pointer:after {
+    background: none repeat scroll 0 0 #fff;
+    content: "";
+    height: 20px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 20px;
+    border: 2px solid #424a5d;
+}
+.remote .chat-pointer, .my .chat-pointer {
+    height: 34px;
+}
+.my .chat-pointer {
+    right: 3px;
+    width: 14px;
+    top: 10px;
+}
+.chat-pointer {
+    overflow: hidden;
+    position: absolute;
+}
+
+
+.remote .chat-pointer {
+    left: 3px;
+    width: 14px;
+    top: 10px;
+}
+.remote .chat-pointer:after {
+    box-shadow: 1px -1px 4px rgba(0, 0, 0, 0.2);
+    left: 8px;
+    top: 5px;
+}
+
+#chatContainer {
+    margin-top: 85px;
+
+}
+
+.navbar {
+    z-index: 11000;
+    margin-left: 50px;
+    padding: 7px;
+    line-height: 30px;
+}
+
+.wrapper {
+    display: inline-block;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+#main-content {
+    margin-left: 50px;
+}
+
+#sidebar {
+    width: 50px;
+    font-size: 25px;
+}
+
+.pd-15{
+    padding: 15px;
+}
