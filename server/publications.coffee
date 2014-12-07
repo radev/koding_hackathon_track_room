@@ -1,9 +1,13 @@
 Meteor.publish "messages", ->
   Messages.find()
 
-Meteor.publish "roomMessages", (roomId, lang) ->
+Meteor.publish "roomMessages", (roomId, lang, limit) ->
   check roomId, String
   check lang, String
+  check limit, Number
+  if limit > Messages.find().count()
+    limit = 0
+
   room = Rooms.findOne roomId
   if room.languages != undefined
     languages = room.languages
@@ -16,12 +20,17 @@ Meteor.publish "roomMessages", (roomId, lang) ->
   ,
     $set:
       languages: languages
+  Messages.find
+    room: roomId,
+    lang: lang
+  ,
+    limit: limit
+    sort:
+      submitted: -1
 
-  Messages.find room: roomId, lang: lang
 
 Meteor.publish "singleRoom", (roomId) ->
   check roomId, String
   Rooms.find roomId,
     fields:
       translate_access_token: false
-
