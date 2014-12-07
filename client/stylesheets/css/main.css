@@ -124,10 +124,16 @@
 #socials {
     top: 20px;
     position: absolute;
-    right: 0px;    
+    right: 10px;    
 }
 
 #socials i {
     font-size: 36px;
     line-height: 0;
+    color: #aeb2b7;
+}
+
+#socials i:hover{
+    font-size: 40px;
+    color: #424a5d;
 }
