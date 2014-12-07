@@ -14,9 +14,16 @@
 }
 
 
+.my #chatMessage {
+    opacity: 1;
+    margin-bottom: 5px;
+    float: right !important;
+}
+
 #chatMessage {
     opacity: 1;
     margin-bottom: 5px;
+    float: left !important;
 }
 
 .my .chat-pointer:after {
