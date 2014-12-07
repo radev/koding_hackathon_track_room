@@ -3,6 +3,13 @@ Template.messagesList.helpers messages: ->
 
 window.subscription = null
 
+Template.messageItem.helpers myMessage: ->
+  if Session.get('name') == @.name
+    return 'my'
+  else
+    return 'remote'
+
+
 Template.messagesList.rendered = ->
   $('input[name="name"]').val(Session.get('name'))
 
