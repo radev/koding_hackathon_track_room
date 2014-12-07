@@ -12,23 +12,7 @@
         </div>
     </header>
   </section>
-
-  <aside>
-      <div id="sidebar"  class="nav-collapse ">
-          <ul class="sidebar-menu text-center" id="nav-accordion">
-
-              <li>
-                <a class="toggleMic"><i class="fa fa-microphone"></i></a>
-              </li>
-              <li>
-                <a class="toggleVideo"><i class="fa fa-video-camera"></i></a>
-              </li>
-              <li>
-                <a href="" id="saveFile"><i class="fa fa-save"></i></a>
-              </li>
-          </ul>
-      </div>
-  </aside>
+   {{> leftSidebar }}
 
   <section id="main-content" class='container-fluid'>
     {{> yield}}

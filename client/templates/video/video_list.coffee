@@ -15,7 +15,7 @@ Template.videoList.rendered = ->
     $("#linktoroom").attr "href", location.href
     $("body").addClass "active"
 
-  room = @.data.room._id
+  room = @.data.room._idw
   room = @.data._id unless room
   webrtc = new SimpleWebRTC(
     localVideoEl: "localVideo"
@@ -28,7 +28,6 @@ Template.videoList.rendered = ->
   webrtc.on "readyToCall", ->
     webrtc.joinRoom room  if room
     return
-
   webrtc.on "channelMessage", (peer, label, data) ->
     showVolume document.getElementById("volume_" + peer.id), data.volume  if data.type is "volume"
     return
@@ -97,31 +96,47 @@ Template.videoList.rendered = ->
       recognizing = false
       return
 
-    vbutton = $(".toggleVideo")
-    sbutton = $(".toggleMic")
-    setsButton = (bool) ->
-      if bool
-        color = "#aeb2b7"
-      else
-        color = "#FFD777"
-      sbutton.css 'color', color
-      return
-
-    setsButton true
-    vbutton.on 'click', (event) ->
-      event.preventDefault()
-      # webrtc.startLocalVideo()
-      # debugger
-
-    sbutton.on 'click', (event) ->
-      event.preventDefault()
-      if recognizing
-        recognition.stop()
-        setsButton true
+    videobutton = $(".toggleVideo")
+    recognitionbutton = $(".toggleSpeechRecognize")
+    micbutton = $(".toggleMic")
+    setsButton = (btn, ok=undefined, fail=undefined) ->
+      color = btn.css 'color'
+      result = ->
         return
-      start_speech()
-      setsButton false
-      return
+      if color == "rgb(174, 178, 183)" || color == "#AEB2B7"
+        color = "#FFD777"
+        result = ok if ok
+      else
+        color = "#AEB2B7"
+        result = fail if fail
+      btn.css 'color', color
+      result()
+
+    setsButton videobutton
+    setsButton micbutton
+
+    micbutton.on 'click', (event) ->
+      event.preventDefault()
+      setsButton micbutton, ->
+        webrtc.unmute()
+        $('#localVolume').show()
+      , ->
+        webrtc.mute()
+        $('#localVolume').hide()
+
+    videobutton.on 'click', (event) ->
+      event.preventDefault()
+      setsButton videobutton, ->
+        webrtc.resumeVideo()
+      , ->
+        webrtc.pauseVideo()
+
+    recognitionbutton.on 'click', (event) ->
+      event.preventDefault()
+      setsButton recognitionbutton, ->
+        start_speech()
+      , ->
+        recognition.stop()
 
 
 
