@@ -75,10 +75,7 @@
 }
 
 #chatContainer {
-    /*padding-top: 200px !important;*/
-    /*overflow-y: scroll;*/
     margin-top: 220px;
-
 }
 
 .navbar {
@@ -106,4 +103,14 @@
 #sidebar {
     width: 50px;
     font-size: 25px;
+}
+#sidebar li{
+    margin: 0;
+}
+.sidebar-menu {
+    margin-top: 60px !important;
+
+}
+.pd-15{
+    padding: 15px;
 }

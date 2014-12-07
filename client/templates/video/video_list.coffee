@@ -97,12 +97,22 @@ Template.videoList.rendered = ->
       recognizing = false
       return
 
-    sbutton = $("#voiceRecognitionButton")
+    vbutton = $(".toggleVideo")
+    sbutton = $(".toggleMic")
     setsButton = (bool) ->
-      sbutton.text (if bool then "Speech recognition" else "Stop recognition")
+      if bool
+        color = "#aeb2b7"
+      else
+        color = "#FFD777"
+      sbutton.css 'color', color
       return
 
     setsButton true
+    vbutton.on 'click', (event) ->
+      event.preventDefault()
+      # webrtc.startLocalVideo()
+      # debugger
+
     sbutton.on 'click', (event) ->
       event.preventDefault()
       if recognizing
