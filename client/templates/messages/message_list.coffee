@@ -5,9 +5,9 @@ window.subscription = null
 
 Template.messageItem.helpers myMessage: ->
   if Session.get('name') == @.name
-    return 'my'
+    return 'my col-lg-7 col-lg-offset-5'
   else
-    return 'remote'
+    return 'remote col-lg-7'
 
 
 Template.messagesList.rendered = ->
