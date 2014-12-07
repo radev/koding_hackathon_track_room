@@ -122,6 +122,10 @@ Template.videoList.rendered = ->
       start_speech()
       setsButton false
       return
+  else
+    $('.toggleMic').tooltip
+      placement: 'rigth',
+      title: 'In your browser voice recognition feature is not available'
 
 
 

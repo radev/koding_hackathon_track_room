@@ -24,3 +24,6 @@ header h1 a {
 #chat {
     overflow-y: scroll;
 }
+.tooltip {
+    z-index: 999999;
+}
