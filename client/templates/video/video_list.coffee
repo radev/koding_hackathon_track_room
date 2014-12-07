@@ -82,7 +82,7 @@ Template.videoList.rendered = ->
       while i < event.results.length
         if event.results[i].isFinal
           final_transcript += event.results[i][0].transcript
-          Meteor.call 'messageInsert', { name: $('input[name="name"]').val(), text: final_transcript, room: room, lang: @.lang }
+          Meteor.call 'messageInsert', { name: $('input[name="name"]').val(), text: final_transcript, room: Session.get('room'), lang: @.lang }
         else
           interim_transcript += event.results[i][0].transcript
         ++i
