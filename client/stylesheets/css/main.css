@@ -2,7 +2,7 @@
     margin-right: 13px;
 }
 #remoteVideos {
-    padding: 10px;
+    padding: 20px;
     background-color: #aaa;
     height:200px;
     width: 100%;
@@ -14,9 +14,16 @@
 }
 
 
+.my #chatMessage {
+    opacity: 1;
+    margin-bottom: 5px;
+    float: right !important;
+}
+
 #chatMessage {
     opacity: 1;
     margin-bottom: 5px;
+    float: left !important;
 }
 
 .my .chat-pointer:after {
