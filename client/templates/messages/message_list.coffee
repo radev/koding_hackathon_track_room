@@ -14,7 +14,16 @@ Template.messagesList.rendered = ->
   $('input[name="name"]').val(Session.get('name'))
 
   $('input[name="name"]').change ->
-    Session.set('name', $(this).val())
+    Meteor.call "updateNameUser", Session.get('name'), $(this).val() || '', window.room, (error, result) ->
+      alert(error.reason)  if error
+      if result.result
+        Session.set('name', $('input[name="name"]').val())
+      else
+        alert(result.message)
+        $('input[name="name"]').val(Session.get('name'))
+
+      return
+
 
   window.subscription = Meteor.subscribe("roomMessages", window.room, Session.get('lang'), window.limit)
   $('select[name="language"]').val(Session.get('lang'))

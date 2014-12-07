@@ -73,3 +73,25 @@ Meteor.methods messageTranslate: (messageAttributes) ->
           get_access_token()
       i++
   return
+
+Meteor.methods updateNameUser: (oldName, newName, room) ->
+  check room, String
+  check oldName, String
+  check newName, String
+  if Messages.find(name: newName, room: room).count() == 0
+    Messages.update
+      name: oldName,
+      room: room
+    ,
+    $set:
+      name: newName
+    ,
+      multi: true
+    return {result: true}
+  else
+    return {result: false, message: 'This name is already in use in the room'}
+
+
+
+
+
