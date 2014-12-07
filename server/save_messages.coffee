@@ -1,15 +1,11 @@
-Meteor.methods messageInsert: (messageAttributes) ->
+Meteor.methods messageTranslate: (messageAttributes) ->
 
   check messageAttributes,
     name: String
     text: String
     room: String
     lang: String
-
-  messageAttributes = _.extend(messageAttributes,
-    submitted: new Date()
-  )
-  message = Messages.insert(messageAttributes)
+    submitted: Date
 
   get_translate = (access_token, from, to, text) ->
     if from != '' && to != ''
@@ -76,4 +72,4 @@ Meteor.methods messageInsert: (messageAttributes) ->
           expired = Math.round(new Date().getTime()/1000.0) + 550
           get_access_token()
       i++
-  return message
+  return
