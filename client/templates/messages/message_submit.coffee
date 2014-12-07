@@ -14,5 +14,5 @@ Template.roomView.events "submit form": (e) ->
 
     $(e.target).find("[name=message]").val('')
     $(e.target).find("[name=message]").focus()
-    $("#chat").scrollTop(99999)
+    $(window).scrollTop(0);
     return

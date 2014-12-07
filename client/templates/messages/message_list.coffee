@@ -4,6 +4,9 @@ Template.messagesList.helpers messages: ->
 window.subscription = null
 
 Template.messagesList.rendered = ->
+  $('input[name="name"]').val(Session.get('name'))
+  $('input[name="name"]').change ->
+    Session.set('name', $(this).val())
   window.subscription = Meteor.subscribe("roomMessages", Session.get('room'), Session.get('lang'), Session.get("limit"))
   $('select[name="language"]').val(Session.get('lang'))
   $('select[name="language"]').change ->
@@ -37,4 +40,3 @@ Template.messagesList.created = ->
 Template.messagesList.events "click .give-me-more": (evt) ->
   incrementLimit()
   return
-

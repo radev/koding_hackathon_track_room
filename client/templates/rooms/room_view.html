@@ -1,19 +1,18 @@
 <template name="roomView">
-  {{> videoList }}
-  {{> messagesList}}
+  <section class="wrapper">
+    {{> videoList }}
+    {{> messagesList}}
+  </section>
   <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-    {{> myVideo }}
-    <form>
-      <div class="row">
-        <div class="col-md-2">
+    <div class="row">
+      <form>
+        <div class="col-lg-3 col-md-3 col-xs-3">
             <div class="form-group">
-              <label>Name:</label>
               <input type="text" name="name" class="form-control" id="name" placeholder="Please enter your nane">
             </div>
         </div>
-        <div class="col-md-2">
+        <div class="col-lg-3 col-md-3 col-xs-3">
           <div class="form-group">
-              <label>Language:</label>
               <select name="language" class="form-control">
                   <option value="en">English</option>
                   <option value="es">Spanish</option>
@@ -21,19 +20,14 @@
               </select>
           </div>
         </div>
-        <div class="col-md-8">
-          <label class="form-label">Write message:</label>
+        <div class="col-lg-4 col-md-3 col-xs-1">
           <input type="text" class="form-control" name="message" id="message">
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 text-left">
+        <div class="col-lg-1 col-md-2 col-xs-5">
           <button type="submit" class="btn btn-info top-button">Submit</button>
         </div>
-        <div class="col-md-6 text-left">
-          <button type="submit" id="voiceRecognitionButton" class="btn btn-info top-button">Speech recognition</button>
-        </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </nav>
+  
 </template>

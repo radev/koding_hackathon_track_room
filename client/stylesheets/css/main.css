@@ -1,6 +1,8 @@
-
+.sidebar-toggle-box{
+    margin-right: 13px;
+}
 #remoteVideos {
-    padding-left: 10px;
+    padding: 10px;
     background-color: #aaa;
     height:200px;
     width: 100%;
@@ -14,18 +16,26 @@
 
 #chatMessage {
     opacity: 1;
+    margin-bottom: 5px;
 }
 
-
+.my .chat-pointer:after {
+    background: none repeat scroll 0 0 #EBFFF1;
+}
+.my .chat-mess-container{
+    background: #EBFFF1;
+}
+.textMessage{
+    margin-top: 3px;
+}
 .chat-mess-container {
-    border: 2px solid #52a2cb;
+    border: 2px solid #424a5d;
     border-radius: 5px;
     background: none repeat scroll 0 0 #fff;
-    padding-top: 0px;
-    padding-left: 5px;
+    padding: 5px;
 }
 
-.chat-pointer-right:after {
+.my .chat-pointer:after {
     box-shadow: 1px -1px 4px rgba(0, 0, 0, 0.2);
     right: 9px;
     top: 5px;
@@ -37,12 +47,12 @@
     position: absolute;
     transform: rotate(45deg);
     width: 20px;
-    border: 2px solid #52a2cb;
+    border: 2px solid #424a5d;
 }
-.chat-pointer-left, .chat-pointer-right {
+.remote .chat-pointer, .my .chat-pointer {
     height: 34px;
 }
-.chat-pointer-right {
+.my .chat-pointer {
     right: 3px;
     width: 14px;
     top: 10px;
@@ -53,37 +63,26 @@
 }
 
 
-.chat-pointer-left {
+.remote .chat-pointer {
     left: 3px;
     width: 14px;
     top: 10px;
 }
-.chat-pointer-left:after {
+.remote .chat-pointer:after {
     box-shadow: 1px -1px 4px rgba(0, 0, 0, 0.2);
     left: 8px;
     top: 5px;
 }
 
 #chatContainer {
-    /*padding-top: 200px !important;*/
-    /*overflow-y: scroll;*/
     margin-top: 220px;
-
 }
 
 .navbar {
-    z-index: 9000;
+    z-index: 11000;
     margin-left: 50px;
-    padding-bottom: 7px;
-}
-
-.site-footer {
-    position: fixed;
-    bottom: 100px;
-}
-
-.sidebar-closed .navbar {
-    margin-left: 0px;
+    padding: 7px;
+    line-height: 30px;
 }
 
 .wrapper {
@@ -104,4 +103,14 @@
 #sidebar {
     width: 50px;
     font-size: 25px;
+}
+#sidebar li{
+    margin: 0;
+}
+.sidebar-menu {
+    margin-top: 60px !important;
+
+}
+.pd-15{
+    padding: 15px;
 }
