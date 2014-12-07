@@ -3,6 +3,10 @@
     padding: 0 !important;
 }
 
+.remotes .videoContainer:hover  {
+    width: 400px;
+}
+
 .videoContainer video {
     /*position: absolute;*/
     width: 100%;
