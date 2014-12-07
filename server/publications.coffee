@@ -16,8 +16,12 @@ Meteor.publish "roomMessages", (roomId, lang) ->
   ,
     $set:
       languages: languages
+
   Messages.find room: roomId, lang: lang
 
 Meteor.publish "singleRoom", (roomId) ->
   check roomId, String
-  Rooms.find roomId
+  Rooms.find roomId,
+    fields:
+      translate_access_token: false
+

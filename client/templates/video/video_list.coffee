@@ -1,5 +1,4 @@
 
-
 Template.videoList.rendered = ->
 
   showVolume = (el, volume) ->
@@ -16,7 +15,8 @@ Template.videoList.rendered = ->
     $("#linktoroom").attr "href", location.href
     $("body").addClass "active"
 
-  room = @.data._id
+  room = @.data.room._id
+  room = @.data._id unless room
   webrtc = new SimpleWebRTC(
     localVideoEl: "localVideo"
     remoteVideosEl: ""
@@ -58,5 +58,61 @@ Template.videoList.rendered = ->
   webrtc.on "volumeChange", (volume, treshold) ->
     showVolume document.getElementById("localVolume"), volume
     return
+
+  recognizing = false
+  if window.webkitSpeechRecognition
+    start_speech = ->
+      # recognition.lang = "ru-RU" # 'en-US' works too, as do many others
+      recognition.lang = $('select[name="language"]').val() # 'en-US' works too, as do many others
+      recognition.start()
+      return
+    recognition = new webkitSpeechRecognition()
+    recognition.continuous = true
+    recognition.interimResults = true
+    recognition.onstart = ->
+      recognizing = true
+      console.log "Recognition started"
+      return
+
+    recognition.onresult = (event) ->
+      interim_transcript = ""
+      final_transcript = ""
+      i = event.resultIndex
+
+      while i < event.results.length
+        if event.results[i].isFinal
+          final_transcript += event.results[i][0].transcript
+          Meteor.call 'messageInsert', { name: $('input[name="name"]').val(), text: final_transcript, room: room, lang: @.lang }
+        else
+          interim_transcript += event.results[i][0].transcript
+        ++i
+      return
+
+    recognition.onerror = (e) ->
+      console.log "Error"
+      return
+
+    recognition.onend = ->
+      console.log "Speech recognition ended"
+      recognizing = false
+      return
+
+    sbutton = $("#voiceRecognitionButton")
+    setsButton = (bool) ->
+      sbutton.text (if bool then "Speech recognition" else "Stop recognition")
+      return
+
+    setsButton true
+    sbutton.on 'click', (event) ->
+      event.preventDefault()
+      if recognizing
+        recognition.stop()
+        setsButton true
+        return
+      start_speech()
+      setsButton false
+      return
+
+
 
   setRoom room
