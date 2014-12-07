@@ -21,4 +21,7 @@ Meteor.publish "roomMessages", (roomId, lang) ->
 
 Meteor.publish "singleRoom", (roomId) ->
   check roomId, String
-  Rooms.find roomId
+  Rooms.find roomId,
+    fields:
+      translate_access_token: false
+
