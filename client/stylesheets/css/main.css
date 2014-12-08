@@ -164,6 +164,16 @@
 .track-wrapper h1{
     color: #333;
 }
+
+.cover-heading {
+    font-size: 11rem;
+    letter-spacing: -2px;
+    text-shadow: 0 1px 10px rgba(0,0,0,0.5);
+    padding-bottom: 1rem;
+    font-weight: 900;
+    color: #FFF;
+}
+
 .track-wrapper{
     background: #ffd777;
     border: solid #424A5D 1px;

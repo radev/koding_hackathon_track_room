@@ -61,8 +61,7 @@ Template.videoList.rendered = ->
   recognizing = false
   if window.webkitSpeechRecognition
     start_speech = ->
-      # recognition.lang = "ru-RU" # 'en-US' works too, as do many others
-      recognition.lang = $('select[name="language"]').val() # 'en-US' works too, as do many others
+      recognition.lang = Session.get('lang') # 'en-US' works too, as do many others
       recognition.start()
       return
     recognition = new webkitSpeechRecognition()
@@ -91,10 +90,7 @@ Template.videoList.rendered = ->
       console.log "Error"
       return
 
-    recognition.onend = ->
-      console.log "Speech recognition ended"
-      recognizing = false
-      return
+
 
     invitebutton = $(".inviteModalSubmit")
     videobutton = $(".toggleVideo")
@@ -112,7 +108,13 @@ Template.videoList.rendered = ->
         result = fail if fail
       btn.css 'color', color
       result()
-
+    recognition.onend = ->
+      console.log "Speech recognition ended"
+      setsButton recognitionbutton, ->
+        console.log('..')
+      , ->
+        recognizing = false
+      return
     setsButton videobutton
     setsButton micbutton
 
@@ -142,7 +144,7 @@ Template.videoList.rendered = ->
       event.preventDefault()
   else
     $('.toggleSpeechRecognize').tooltip
-      title: 'Feature is not supported in your browser',
+      title: 'Feature is not supported in your browser, try to use Chrome',
       placement: 'right'
 
 

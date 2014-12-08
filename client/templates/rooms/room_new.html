@@ -1,7 +1,8 @@
 <template name="roomNew">
+  	<h1 class="cover-heading">TRACK ROOM</h1>
+
 	<div class='track'>
 	<div class='track-wrapper'>
-  	<h1 class="cover-heading">TRACK ROOM</h1>
    	<div class="row">
     <form class="form-inline" role="form">
 	  <div class="form-group">
@@ -13,11 +14,7 @@
 	  </div>
 	  <div class="form-group">
 	      <select name="language" class="form-control">
-	          <option value="en" selected="selected">English</option>
-              <option value="de">German</option>
-              <option value="fr">French</option>
-	          <option value="ru">Russian</option>
-              <option value="es">Spanish</option>
+	          {{ >languages}}
 	      </select>
 	  </div>
 	</form>
@@ -25,7 +22,7 @@
 	<br>
    	<div class="row">
 	<p class="lead">
-	  <a href="#" class="btn btn-lg btn-default" id="addRoom">Join</a>
+	  <a href="#" class="btn btn-lg btn-default" id="addRoom">Create room</a>
 	</p>
 	</div>
 	</div>
