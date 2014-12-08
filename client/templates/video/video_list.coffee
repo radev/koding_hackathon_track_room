@@ -103,7 +103,7 @@ Template.videoList.rendered = ->
       color = btn.css 'color'
       result = ->
         return
-      if color == "rgb(174, 178, 183)" || color == "#AEB2B7"
+      if color == "rgb(174, 178, 183)" || color == "#AEB2B7" ||  color == "rgb(255, 255, 255)"
         color = "#FFD777"
         result = ok if ok
       else
