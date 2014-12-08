@@ -137,3 +137,18 @@
     font-size: 40px;
     color: #424a5d;
 }
+
+
+.track-wrapper h1{
+    color: #333;
+}
+.track-wrapper{
+    background: #ffd777;
+    border: solid #424A5D 1px;
+    width: 440px;
+    margin: auto;
+    border-radius: 5px;
+    padding-top: 32px;
+    padding-bottom: 12px;
+    overflow: hidden;
+}
