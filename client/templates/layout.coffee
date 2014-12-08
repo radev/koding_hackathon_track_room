@@ -3,3 +3,12 @@ Template.layout.helpers twitterStatus: ->
 
 Template.layout.helpers facebookShare: ->
   return encodeURI(location.href)
+
+Template.landingLayout.rendered = ->
+  $("body").css("height", "100%");
+  $("html").css("height", "100%");
+
+
+Template.layout.rendered = ->
+  $("body").css("height", "");
+  $("html").css("height", "");

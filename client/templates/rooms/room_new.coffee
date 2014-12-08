@@ -1,3 +1,4 @@
 Template.roomNew.rendered = ->
-  $('#linktoroom').html('')
   window.room = undefined
+  $('input[name="name"]').val Session.get('name')
+  $('select[name="language"]').val Session.get('lang')

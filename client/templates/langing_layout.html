@@ -1,11 +1,28 @@
 <template name="landingLayout">
-  <section id="container">
-    <header class="header black-bg">
-        <a href="/" class="logo"><b>TRACK ROOM</b></a>
-    </header>
-  </section>
-  <section id="main-content" class='container-fluid'>
-    {{> yield}}
-  </section>
+
+
+<div class="site-wrapper text-center">
+
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+
+          <div class="inner cover">
+    		{{> yield}}
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>by <a target="_blank" href="http://itbeaver.co">ITBeaver</a> <span class='red'>♥</span>, with love</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+</div>
 
 </template>

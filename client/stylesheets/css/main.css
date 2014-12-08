@@ -157,7 +157,23 @@
     background-color: #5C6376;
     border-color: #353C4D;
 }
-.btn-primary:focus{
+.btn-primary:focus {
     background-color: #5C6376;
     border-color: #353C4D;
+}
+.track-wrapper h1{
+    color: #333;
+}
+.track-wrapper{
+    background: #ffd777;
+    border: solid #424A5D 1px;
+    width: 440px;
+    margin: auto;
+    border-radius: 5px;
+    padding-top: 32px;
+    padding-bottom: 12px;
+    overflow: hidden;
+}
+.tooltip {
+    z-index: 99999;
 }

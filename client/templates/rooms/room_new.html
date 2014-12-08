@@ -1,6 +1,31 @@
 <template name="roomNew">
-  <div class="row">
-    <h2>Create new room</h2>
-    <button class="btn btn-info top-button" id="addRoom">New Room</button>
-  </div>
+	<div class='track'>
+	<div class='track-wrapper'>
+  	<h1 class="cover-heading">TRACK ROOM</h1>
+   	<div class="row">
+    <form class="form-inline" role="form">
+	  <div class="form-group">
+	    <div class="input-group">
+	      <label class="sr-only" for="name">Enter name:</label>
+	      <div class="input-group-addon">Enter name:</div>
+	      <input type="text" name="name" class="form-control" id="name" placeholder="your name..">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	      <select name="language" class="form-control">
+	          <option value="en">English</option>
+	          <option value="es">Spanish</option>
+	          <option value="ru">Russian</option>
+	      </select>
+	  </div>
+	</form>
+	</div>
+	<br>
+   	<div class="row">
+	<p class="lead">
+	  <a href="#" class="btn btn-lg btn-default" id="addRoom">Join</a>
+	</p>
+	</div>
+	</div>
+	</div>
 </template>
