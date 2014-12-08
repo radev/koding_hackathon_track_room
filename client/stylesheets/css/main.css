@@ -123,8 +123,8 @@
 }
 #sidebar a i{
     font-size: 30px;
+    padding-right: 10px;
 }
-
 #socials {
     top: 20px;
     position: absolute;

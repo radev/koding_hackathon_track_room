@@ -92,6 +92,7 @@ Template.videoList.rendered = ->
 
 
 
+    toggleVideos = $(".toggleVideos")
     invitebutton = $(".inviteModalSubmit")
     videobutton = $(".toggleVideo")
     recognitionbutton = $(".toggleSpeechRecognize")
@@ -117,6 +118,16 @@ Template.videoList.rendered = ->
       return
     setsButton videobutton
     setsButton micbutton
+
+    toggleVideos.on 'click', (event) ->
+      event.preventDefault()
+      setsButton toggleVideos, ->
+        $('#remoteVideos').show()
+        $('#chatContainer').css('margin-top', '220px')
+      , ->
+        $('#remoteVideos').hide()
+        $('#chatContainer').css('margin-top', '20px')
+    toggleVideos.click()
 
     micbutton.on 'click', (event) ->
       event.preventDefault()
