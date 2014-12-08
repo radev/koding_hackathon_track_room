@@ -91,10 +91,7 @@ Template.videoList.rendered = ->
       console.log "Error"
       return
 
-    recognition.onend = ->
-      console.log "Speech recognition ended"
-      recognizing = false
-      return
+
 
     videobutton = $(".toggleVideo")
     recognitionbutton = $(".toggleSpeechRecognize")
@@ -111,7 +108,13 @@ Template.videoList.rendered = ->
         result = fail if fail
       btn.css 'color', color
       result()
-
+    recognition.onend = ->
+      console.log "Speech recognition ended"
+      setsButton recognitionbutton, ->
+        console.log('..')
+      , ->
+        recognizing = false
+      return
     setsButton videobutton
     setsButton micbutton
 
@@ -139,7 +142,7 @@ Template.videoList.rendered = ->
         recognition.stop()
   else
     $('.toggleSpeechRecognize').tooltip
-      title: 'Feature is not supported in your browser',
+      title: 'Feature is not supported in your browser, try to use Chrome',
       placement: 'right'
 
 
