@@ -137,6 +137,10 @@ Template.videoList.rendered = ->
         start_speech()
       , ->
         recognition.stop()
+  else
+    $('.toggleSpeechRecognize').tooltip
+      title: 'Feature is not supported in your browser',
+      placement: 'right'
 
 
 

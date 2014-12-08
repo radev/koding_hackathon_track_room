@@ -3,6 +3,10 @@
     padding: 0 !important;
 }
 
+.remotes .videoContainer:hover  {
+    width: 400px;
+}
+
 .videoContainer video {
     /*position: absolute;*/
     width: 100%;
@@ -16,10 +20,6 @@
     right: 0px;
     bottom: 0px;
     background-color: #12acef;
-}
-
-header h1 a {
-    font-size: 16px;
 }
 
 #chat {
@@ -47,4 +47,9 @@ header h1 a {
 
 .header-link {
     margin-bottom: 0px !important;
+}
+
+#linktoroom {
+    font-weight: bold;
+    color: #333;
 }

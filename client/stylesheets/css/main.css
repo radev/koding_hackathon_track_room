@@ -117,8 +117,12 @@
 .sidebar-menu {
     margin-top: 60px !important;
 }
+#sidebar a:hover {
+    background: #293245;
+
+}
 #sidebar a i{
-    font-size: 20px;
+    font-size: 30px;
 }
 
 #socials {
@@ -130,15 +134,33 @@
 #socials i {
     font-size: 36px;
     line-height: 0;
-    color: #aeb2b7;
-}
-
-#socials i:hover{
-    font-size: 40px;
     color: #424a5d;
 }
 
+#socials i:hover{
+    color: #5c6781;
+}
 
+.btn-send{
+    width: 100%;
+}
+
+.btn-primary{
+    background-color: #424A5D;
+    border-color: #2A3142;
+}
+.btn-primary:hover{
+    background-color: #5C6376;
+    border-color: #353C4D;
+}
+.btn-primary:active{
+    background-color: #5C6376;
+    border-color: #353C4D;
+}
+.btn-primary:focus {
+    background-color: #5C6376;
+    border-color: #353C4D;
+}
 .track-wrapper h1{
     color: #333;
 }
@@ -151,4 +173,7 @@
     padding-top: 32px;
     padding-bottom: 12px;
     overflow: hidden;
+}
+.tooltip {
+    z-index: 99999;
 }
