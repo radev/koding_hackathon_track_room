@@ -96,6 +96,7 @@ Template.videoList.rendered = ->
       recognizing = false
       return
 
+    invitebutton = $(".inviteModalSubmit")
     videobutton = $(".toggleVideo")
     recognitionbutton = $(".toggleSpeechRecognize")
     micbutton = $(".toggleMic")
@@ -137,6 +138,8 @@ Template.videoList.rendered = ->
         start_speech()
       , ->
         recognition.stop()
+    invitebutton.on 'click', (event) ->
+      event.preventDefault()
 
 
 

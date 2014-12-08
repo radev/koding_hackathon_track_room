@@ -137,3 +137,9 @@
     font-size: 40px;
     color: #424a5d;
 }
+.modal {
+    z-index: 99999;
+}
+.modal-header {
+    background: #FFD777;
+}
