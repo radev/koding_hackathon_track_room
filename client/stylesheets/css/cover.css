@@ -50,10 +50,11 @@
 
 
 .mastfoot {
-  color: #111; /* IE8 proofing */
+  color: #eee; /* IE8 proofing */
 }
 .mastfoot a {
   color: #EEE; /* IE8 proofing */
+  text-decoration: underline;
 }
 .red{
     color: red;
