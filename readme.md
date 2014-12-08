@@ -36,10 +36,10 @@ Also, each team member was directly involved in the design of applications, disc
 ![Screen shoot 4](http://memoris.koding.io/images/screenshot4.png "Koding")
 ![Screen shoot 5](http://memoris.koding.io/images/screenshot5.png "Koding")
 
-## Technology stack
- - Web Speech API - OCR for later translation
-- Bing Translation API - Translations of text resulting from the OCR module or written by users in chat
-- WebRTC - audio-video interaction between the users browsers
+## Technologies stack
+- Web Speech API - speech recognition for browsers
+- Bing Translation API - Translations of text resulting from speech recognition module or written by users in chat
+- WebRTC - real-time communication protocol for browsers
 - Meteor.js - the basis of real-time applications
 
-Provide a list of APIs you used in this project.
+
