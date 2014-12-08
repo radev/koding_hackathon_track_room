@@ -1,5 +1,6 @@
 Template.roomView.events "submit form": (e) ->
   e.preventDefault()
+  Session.set 'name', $('#name').val()
   message =
     name: $('#name').val()
     text: $(e.target).find("[name=message]").val()
