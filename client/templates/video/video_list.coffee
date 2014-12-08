@@ -92,6 +92,7 @@ Template.videoList.rendered = ->
 
 
 
+    invitebutton = $(".inviteModalSubmit")
     videobutton = $(".toggleVideo")
     recognitionbutton = $(".toggleSpeechRecognize")
     micbutton = $(".toggleMic")
@@ -139,6 +140,11 @@ Template.videoList.rendered = ->
         start_speech()
       , ->
         recognition.stop()
+    invitebutton.on 'click', (event) ->
+      event.preventDefault()
+      email = $('#inviteEmail').val()
+      Meteor.call 'sendEmailInvite', email, window.room, window.location.protocol+"//"+window.location.host
+      $('.modal').modal('hide')
   else
     $('.toggleSpeechRecognize').tooltip
       title: 'Feature is not supported in your browser, try to use Chrome',
