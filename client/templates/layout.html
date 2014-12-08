@@ -1,0 +1,51 @@
+<template name="layout">
+  <section id="container">
+    <header class="header black-bg">
+        <a href="/" class="logo"><b>TRACK ROOM</b></a>
+        <div class='header-link'>
+          <p class='text-center header-link'>Link to this room is:</p>
+          <p class="text-center header-link"><span id="linktoroom" class='text-center'></span></p>
+          <p class="text-center header-link">Share room link to invite more users</p>
+          <div id='socials' class='pull-right'>
+            <a href="http://twitter.com/intent/tweet{{twitterStatus}}" title="Share on Twitter" target="_blank" class="btn btn-twitter">
+              <i class="fa fa-twitter-square"></i>
+            </a>
+            <a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u={{facebookShare}}">
+              <i class="fa fa-facebook-square"></i>
+            </a>
+            
+          </div>
+        </div>
+    </header>
+  </section>
+   {{> leftSidebar }}
+
+  <section id="main-content" class='container-fluid'>
+    {{> yield}}
+  </section>
+
+  <div class="modal fade" id="inviteModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title">Invite to room by email</h4>
+        </div>
+        <div class="modal-body">
+         <div class="form-group">
+          <div class="input-group">
+            <label class="sr-only" for="email">Enter email:</label>
+            <div class="input-group-addon">@</div>
+            <input type="email" name="inviteEmail" class="form-control" id="inviteEmail" placeholder="foo@bar.com">
+          </div>
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="inviteModalSubmit btn btn-primary">Send invite</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</template>

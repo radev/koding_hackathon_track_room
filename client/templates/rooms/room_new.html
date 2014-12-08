@@ -1,0 +1,30 @@
+<template name="roomNew">
+  	<h1 class="cover-heading">TRACK ROOM</h1>
+
+	<div class='track'>
+	<div class='track-wrapper'>
+   	<div class="row">
+    <form class="form-inline" role="form">
+	  <div class="form-group">
+	    <div class="input-group">
+	      <label class="sr-only" for="name">Enter name:</label>
+	      <div class="input-group-addon">Enter name:</div>
+	      <input type="text" name="name" class="form-control" id="name" placeholder="your name..">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	      <select name="language" class="form-control">
+	          {{ >languages}}
+	      </select>
+	  </div>
+	</form>
+	</div>
+	<br>
+   	<div class="row">
+	<p class="lead">
+	  <a href="#" class="btn btn-lg btn-default" id="addRoom">Create room</a>
+	</p>
+	</div>
+	</div>
+	</div>
+</template>

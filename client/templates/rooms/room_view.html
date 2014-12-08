@@ -1,0 +1,31 @@
+<template name="roomView">
+  <section class="wrapper">
+    {{> videoList }}
+    {{> messagesList}}
+  </section>
+  <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="row">
+      <form>
+        <div class="col-lg-2">
+            <div class="form-group">
+              <input type="text" name="name" class="form-control" id="name" autocomplete="false" placeholder="Enter your name..">
+            </div>
+        </div>
+        <div class="col-lg-1">
+          <div class="form-group">
+              <select name="language" class="form-control">
+                  {{ >languages}}
+              </select>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <input type="text" class="form-control" placeholder="Enter your message to room.." autocomplete="false" name="message" id="message">
+        </div>
+        <div class="col-lg-1">
+          <button type="submit" class="btn btn-primary btn-send">Send</button>
+        </div>
+      </form>
+    </div>
+  </nav>
+  
+</template>
