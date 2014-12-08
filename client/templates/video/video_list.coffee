@@ -61,8 +61,7 @@ Template.videoList.rendered = ->
   recognizing = false
   if window.webkitSpeechRecognition
     start_speech = ->
-      # recognition.lang = "ru-RU" # 'en-US' works too, as do many others
-      recognition.lang = $('select[name="language"]').val() # 'en-US' works too, as do many others
+      recognition.lang = Session.get('lang') # 'en-US' works too, as do many others
       recognition.start()
       return
     recognition = new webkitSpeechRecognition()
